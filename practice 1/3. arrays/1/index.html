@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Нахождение максимума в массиве</title>
+</head>
+<body>
+
+  <h1>Пример работы функции findMax</h1>
+  
+  <p>Максимальное число в массиве [3, 7, 2, 9, 5]: <span id="result1"></span></p>
+  <p>Максимальное число в массиве [-10, -3, -5, -1]: <span id="result2"></span></p>
+  <p>Максимальное число в массиве [100]: <span id="result3"></span></p>
+  
+  <script>
+    function findMax(arr) {
+      return Math.max(...arr);
+    }
+
+   
+    document.getElementById('result1').textContent = findMax([3, 7, 2, 9, 5]);      
+    document.getElementById('result2').textContent = findMax([-10, -3, -5, -1]);    
+    document.getElementById('result3').textContent = findMax([100]);               
+  </script>
+
+</body>
+</html>

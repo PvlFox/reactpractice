@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Переворот массива</title>
+</head>
+<body>
+
+  <h1>Пример работы функции reverseArray</h1>
+  
+  <p>Перевёрнутый массив [1, 2, 3]: <span id="result1"></span></p>
+  <p>Перевёрнутый массив ["a", "b", "c"]: <span id="result2"></span></p>
+  <p>Перевёрнутый массив [true, false, true]: <span id="result3"></span></p>
+  
+  <script>
+    function reverseArray(arr) {
+      return arr.slice().reverse();
+    }
+
+    document.getElementById('result1').textContent = JSON.stringify(reverseArray([1, 2, 3]));          
+    document.getElementById('result2').textContent = JSON.stringify(reverseArray(["a", "b", "c"]));   
+    document.getElementById('result3').textContent = JSON.stringify(reverseArray([true, false, true])); 
+  </script>
+
+</body>
+</html>

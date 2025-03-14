@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поиск индекса элемента в массиве</title>
+</head>
+<body>
+
+  <h1>Пример работы функции findIndex</h1>
+  
+  <p>Индекс элемента 30 в массиве [10, 20, 30, 40]: <span id="result1"></span></p>
+  <p>Индекс элемента "banana" в массиве ["apple", "banana", "cherry"]: <span id="result2"></span></p>
+  <p>Индекс элемента 4 в массиве [1, 2, 3]: <span id="result3"></span></p>
+  
+  <script>
+    function findIndex(arr, value) {
+      return arr.indexOf(value);
+    }
+
+    document.getElementById('result1').textContent = findIndex([10, 20, 30, 40], 30);            
+    document.getElementById('result2').textContent = findIndex(["apple", "banana", "cherry"], "banana"); 
+    document.getElementById('result3').textContent = findIndex([1, 2, 3], 4);                  
+  </script>
+
+</body>
+</html>

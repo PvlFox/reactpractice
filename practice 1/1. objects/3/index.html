@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Объединение двух объектов</title>
+</head>
+<body>
+  <h1>Объединение двух объектов</h1>
+  
+  <button id="mergeButton">Объединить объекты</button>
+
+  <p id="result"></p>
+
+  <script>
+    // Функция для объединения объектов
+    function mergeObjects(obj1, obj2) {
+      return { ...obj1, ...obj2 }; 
+    }
+
+
+    const obj1 = { name: "Alice", age: 25 };
+    const obj2 = { age: 30, city: "London" };
+
+    const button = document.getElementById("mergeButton");
+    const result = document.getElementById("result");
+
+
+    button.addEventListener("click", function() {
+      const mergedObj = mergeObjects(obj1, obj2);
+      result.textContent = JSON.stringify(mergedObj, null, 2); 
+    });
+  </script>
+</body>
+</html>

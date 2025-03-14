@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count Properties</title>
+</head>
+<body>
+  <h1>Подсчет количества свойств в объекте</h1>
+  
+
+  <button id="countButton">Подсчитать свойства</button>
+
+
+  <p id="result"></p>
+
+  <script>
+    // Функция для подсчета свойств
+    function countProperties(obj) {
+      return Object.keys(obj).length;
+    }
+
+    const user = { name: "Alice", age: 25, city: "New York" };
+
+
+    const button = document.getElementById("countButton");
+    const result = document.getElementById("result");
+
+    button.addEventListener("click", function() {
+      const count = countProperties(user);
+      result.textContent = `Количество свойств в объекте: ${count}`;
+    });
+  </script>
+</body>
+</html>

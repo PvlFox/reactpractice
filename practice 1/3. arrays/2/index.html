@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фильтрация четных чисел</title>
+</head>
+<body>
+
+  <h1>Пример работы функции filterEvenNumbers</h1>
+  
+  <p>Четные числа из массива [1, 2, 3, 4, 5, 6]: <span id="result1"></span></p>
+  <p>Четные числа из массива [7, 9, 11]: <span id="result2"></span></p>
+  <p>Четные числа из массива [12, 14, 15, 17]: <span id="result3"></span></p>
+  
+  <script>
+    function filterEvenNumbers(arr) {
+      return arr.filter(num => num % 2 === 0);
+    }
+
+    document.getElementById('result1').textContent = JSON.stringify(filterEvenNumbers([1, 2, 3, 4, 5, 6]));  
+    document.getElementById('result2').textContent = JSON.stringify(filterEvenNumbers([7, 9, 11]));            
+    document.getElementById('result3').textContent = JSON.stringify(filterEvenNumbers([12, 14, 15, 17]));      
+  </script>
+
+</body>
+</html>

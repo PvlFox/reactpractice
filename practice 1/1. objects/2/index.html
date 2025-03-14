@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проверка наличия свойства</title>
+</head>
+<body>
+  <h1>Проверка наличия свойства в объекте</h1>
+  
+
+  <label for="property">Введите свойство: </label>
+  <input type="text" id="property" />
+
+
+  <button id="checkButton">Проверить свойство</button>
+
+  <p id="result"></p>
+
+  <script>
+    // Функция для проверки наличия свойства
+    function hasProperty(obj, key) {
+      return obj.hasOwnProperty(key); 
+    }
+
+
+    const user = { name: "Bob", age: 30 };
+
+
+    const button = document.getElementById("checkButton");
+    const result = document.getElementById("result");
+    const input = document.getElementById("property");
+
+
+    button.addEventListener("click", function() {
+      const key = input.value.trim(); 
+      if (key === "") {
+        result.textContent = "Пожалуйста, введите имя свойства!";
+      } else {
+        const exists = hasProperty(user, key); 
+        if (exists) {
+          result.textContent = `Свойство "${key}" существует в объекте.`;
+        } else {
+          result.textContent = `Свойство "${key}" не существует в объекте.`;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

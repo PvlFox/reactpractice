@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вычисление факториала с использованием цикла</title>
+</head>
+<body>
+  <h1>Вычисление факториала числа с использованием цикла</h1>
+  
+  <label for="number">Введите число:</label>
+  <input type="number" id="number" min="0" value="0">
+  
+  <button onclick="calculateFactorial()">Вычислить факториал</button>
+
+  <h2>Результат:</h2>
+  <p id="result">Факториал числа будет отображен здесь.</p>
+
+  <script>
+    // Функция для вычисления факториала с использованием цикла
+    function factorial(n) {
+      let result = 1;
+      for (let i = 1; i <= n; i++) {
+        result *= i; 
+      }
+      return result;
+    }
+
+    function calculateFactorial() {
+      const number = parseInt(document.getElementById("number").value);
+      
+      const result = factorial(number);
+
+      document.getElementById("result").textContent = `Факториал числа ${number} = ${result}`;
+    }
+  </script>
+</body>
+</html>

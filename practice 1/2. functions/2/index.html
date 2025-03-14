@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проверка на простоту числа</title>
+</head>
+<body>
+  <h1>Проверка на простоту числа</h1>
+  
+  <label for="number">Введите число:</label>
+  <input type="number" id="number" min="1" value="1">
+  
+  <button onclick="checkPrime()">Проверить</button>
+
+  <h2>Результат:</h2>
+  <p id="result"></p>
+
+  <script>
+    function isPrime(n) {
+      if (n <= 1) {
+        return false; 
+      }
+      if (n === 2) {
+        return true; 
+      }
+      if (n % 2 === 0) {
+        return false; 
+      }
+
+
+      for (let i = 3; i * i <= n; i += 2) {
+        if (n % i === 0) {
+          return false; 
+        }
+      }
+      
+      return true; 
+    }
+
+   
+    function checkPrime() {
+      const number = parseInt(document.getElementById("number").value);
+      
+    
+      const result = isPrime(number);
+
+  
+      const resultText = result ? `${number} — простое число.` : `${number} — не простое число.`;
+      document.getElementById("result").textContent = resultText;
+    }
+  </script>
+</body>
+</html>

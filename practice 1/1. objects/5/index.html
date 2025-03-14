@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример работы с removeProperty</title>
+</head>
+<body>
+  <h1>Пример удаления свойства из объекта</h1>
+
+  <div>
+    <h2>Объект до удаления свойства:</h2>
+    <pre id="before"></pre>
+  </div>
+
+  <div>
+    <h2>Объект после удаления свойства:</h2>
+    <pre id="after"></pre>
+  </div>
+
+  <script>
+
+    function removeProperty(obj, key) {
+      delete obj[key];
+    }
+
+    const book = { title: "1984", author: "George Orwell", year: 1949 };
+
+    document.getElementById('before').textContent = JSON.stringify(book, null, 2);
+
+    removeProperty(book, "year");
+
+
+    document.getElementById('after').textContent = JSON.stringify(book, null, 2);
+  </script>
+</body>
+</html>

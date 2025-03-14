@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Переворот строки</title>
+</head>
+<body>
+
+  <h1>Пример работы функции reverseString</h1>
+  
+  <p>Перевёрнутая строка "hello": <span id="result1"></span></p>
+  <p>Перевёрнутая строка "JavaScript": <span id="result2"></span></p>
+  
+  <script>
+    function reverseString(str) {
+      return str.split('').reverse().join('');
+    }
+
+    document.getElementById('result1').textContent = reverseString("hello");     
+    document.getElementById('result2').textContent = reverseString("JavaScript");
+  </script>
+
+</body>
+</html>

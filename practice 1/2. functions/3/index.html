@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сумма всех чисел</title>
+</head>
+<body>
+
+  <h1>Пример работы функции sumAll</h1>
+  
+  <p>Сумма чисел 1, 2, 3, 4: <span id="result1"></span></p>
+  <p>Сумма чисел 5, 10, 15: <span id="result2"></span></p>
+  <p>Сумма без чисел (0): <span id="result3"></span></p>
+  
+  <script>
+    function sumAll(...numbers) {
+      return numbers.reduce((acc, num) => acc + num, 0);
+    }
+
+    document.getElementById('result1').textContent = sumAll(1, 2, 3, 4);  
+    document.getElementById('result2').textContent = sumAll(5, 10, 15);    
+    document.getElementById('result3').textContent = sumAll();             
+  </script>
+
+</body>
+</html>
